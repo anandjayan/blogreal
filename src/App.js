@@ -1,3 +1,4 @@
+import NoMatch from "./404";
 import Topbar from "./components/topbar/topbar";
 import Register from "./pages/Register/Register";
 import Home from "./pages/home/Home";
@@ -17,6 +18,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route component={NoMatch} />
         <Route path="/register" element={user ? <Home /> : <Register />} />
         <Route path="/login" element={user ? <Home /> : <Login />} />
         <Route path="/Settings" element={user ? <Settings /> : <Register />} />
